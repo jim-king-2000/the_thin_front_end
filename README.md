@@ -14,3 +14,4 @@
 * [第五课 前端技术入门之DOM & BOM](lesson5.md)
 * [第六课 前端技术入门之React（一）](lesson6.md)
 * [第七课 前端技术入门之React（二）](lesson7.md)
+* [第八课 前端技术入门之Next.js](lesson8.md)
