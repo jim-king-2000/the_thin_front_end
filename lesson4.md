@@ -194,13 +194,13 @@ p {
     1. `word-wrap: break-word;`	允许折行。
 
 1. 定位属性：
-    1. top: 30px;	设置元素上边界到父元素上边界的偏移。
-    1. left: 30px;	同上，但为左偏移。
-    1. right: 30px;	同上，但为右偏移。
-    1. bottom: 30px;	同上，但为下偏移。
-    1. overflow: scroll;	规定当内容溢出元素时的行为。
-    1. visibility: hidden;	规定元素可见性。
-    1. z-index: 3;	规定重叠元素的显示顺序。
+    1. `top: 30px;`	设置元素上边界到父元素上边界的偏移。
+    1. `left: 30px;`	同上，但为左偏移。
+    1. `right: 30px;`	同上，但为右偏移。
+    1. `bottom: 30px;`	同上，但为下偏移。
+    1. `overflow: scroll;`	规定当内容溢出元素时的行为。
+    1. `visibility: hidden;`	规定元素可见性。
+    1. `z-index: 3;`	规定重叠元素的显示顺序。
 
 1. 颜色属性
     1. `opacity: 0.5;`	设置div元素的不透明级别，1表示不透明，0表示全透明。

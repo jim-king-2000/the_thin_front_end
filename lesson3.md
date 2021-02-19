@@ -97,4 +97,4 @@ HTML标签规则:
 
 ## 参考资料
 1. [W3schools](http://www.w3school.com.cn/html/index.asp)
-2. [HTML & CSS: Design and Build Websites](https://item.jd.com/11186682.html)
+1. [HTML & CSS: Design and Build Websites](https://item.jd.com/11186682.html)

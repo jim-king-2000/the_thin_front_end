@@ -11,3 +11,4 @@
 * [第二课 前端开发生态系统简史](lesson2.md)
 * [第三课 前端技术入门之HTML](lesson3.md)
 * [第四课 前端技术入门之CSS](lesson4.md)
+* [第五课 前端技术入门之DOM & BOM](lesson5.md)
