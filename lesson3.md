@@ -4,13 +4,13 @@
 一个最简单的HTML如下所示：
 
 ```html
-	<!DOCTYPE HTML>
-	<html>
-	  <head></head>
-	  <body>
-	    <p>Hello HTML</p>
-	  </body>
-	</html>
+<!DOCTYPE HTML>
+<html>
+  <head></head>
+  <body>
+    <p>Hello HTML</p>
+  </body>
+</html>
 ```
 
 我们可以看到，一个HTML文档有两部分组成。第一部分是文档声明`<!DOCTYPE HTML>`，表示这是一个HTML文档。第二部分是根元素，`<html></html>`，所有的内容都在其中。
@@ -44,21 +44,21 @@ HTML标签规则:
 在HTML中，处理用户输入的界面叫表单。表单内的元素就是各种控件，如文本框，密码框，单选框，多选框等。表单的标签叫`<form>`，各控件就放在`<form></form>`中。如下就是一个简单的表单：
 
 ```html
-	<form>
-	  <input type="text" name="email" size="40" maxlength="50" />
-	  <input type="password" />
-	  <input type="checkbox" checked="checked" />
-	  <input type="radio" checked="checked" />
-	  <input type="submit" value="Send" />
-	  <input type="reset" />
-	  <input type="hidden" />
-	  <select>
-	    <option>苹果</option>
-	    <option selected="selected">香蕉</option>
-	    <option>樱桃</option>
-	  </select>
-	  <textarea name="comment" rows="60" cols="20"></textarea>
-	</form>
+<form>
+  <input type="text" name="email" size="40" maxlength="50" />
+  <input type="password" />
+  <input type="checkbox" checked="checked" />
+  <input type="radio" checked="checked" />
+  <input type="submit" value="Send" />
+  <input type="reset" />
+  <input type="hidden" />
+  <select>
+    <option>苹果</option>
+    <option selected="selected">香蕉</option>
+    <option>樱桃</option>
+  </select>
+  <textarea name="comment" rows="60" cols="20"></textarea>
+</form>
 ```
 
 现在还无法处理表单的交互。不用着急，在后续的课程中，我们会介绍如何使用React来处理表单逻辑。
@@ -71,24 +71,24 @@ HTML标签规则:
 4. 打开package.json，将scripts修改成下面的内容：
 	
 ```json
-	"scripts": {
-	  "dev": "next",
-	  "build": "next build",
-	  "start": "next start"
-	},
+"scripts": {
+  "dev": "next",
+  "build": "next build",
+  "start": "next start"
+},
 ```
 	
 5. 新建static和pages子目录：mkdir static pages
 6. 在static子目录下创建index.html文件
 
 ```html
-	<!DOCTYPE HTML>
-	<html>
-	  <head></head>
-	  <body>
-	    <p>Hello HTML</p>
-	  </body>
-	</html>
+<!DOCTYPE HTML>
+<html>
+  <head></head>
+  <body>
+    <p>Hello HTML</p>
+  </body>
+</html>
 ```
 	
 7. 启动服务器：npm run dev
