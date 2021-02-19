@@ -78,8 +78,8 @@ HTML标签规则:
 	},
 ```
 	
-	5. 新建static和pages子目录：mkdir static pages
-	6. 在static子目录下创建index.html文件
+5. 新建static和pages子目录：mkdir static pages
+6. 在static子目录下创建index.html文件
 
 ```html
 	<!DOCTYPE HTML>
@@ -91,9 +91,9 @@ HTML标签规则:
 	</html>
 ```
 	
-	7. 启动服务器：npm run dev
-	8. 打开浏览器，访问 http://localhost:3000/static/index.html
-	9. 再把index.html的内容换成表单试试。
+7. 启动服务器：npm run dev
+8. 打开浏览器，访问 http://localhost:3000/static/index.html
+9. 再把index.html的内容换成表单试试。
 
 ## 参考资料
 1. [W3schools](http://www.w3school.com.cn/html/index.asp)
