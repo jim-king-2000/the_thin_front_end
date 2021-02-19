@@ -5,24 +5,24 @@
 
 ## 在HTML文件中链接CSS文件
 我们使用`<link>`标签来链接外部CSS，它位于`<head>`标签内。虽然也可以把CSS写在HTML里面，但一般我们不这样使用。
-
-	<!DOCTYPE HTML>
-	<html>
-	  <head>
-	    <link rel='stylesheet' type='text/css' href='/static/index.css' />
-	  </head>
-	  <body>
-	    <p>Hello HTML</p>
-	  </body>
-	</html>
-
+```html
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel='stylesheet' type='text/css' href='/static/index.css' />
+  </head>
+  <body>
+    <p>Hello HTML</p>
+  </body>
+</html>
+```
 ## CSS的基本语法
 最简单的CSS文件内容只有三行。
-
-	p {
-	  background-color: yellow;
-	}
-
+```css
+p {
+  background-color: yellow;
+}
+```
 这里的p，我们称之为选择器。它的意思是，花括号中的CSS规则，适用于HTML文档内的所有`<p>`标签。花括号中可以有多条规则，每一条规则必须以分号结尾。规则的内容分为属性和值，之间用冒号分隔。这里我们只定义了一条规则，就是把背景色改为黄色。
 CSS对大小写不敏感。但我们一般都使用小写。
 
