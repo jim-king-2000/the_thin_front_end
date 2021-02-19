@@ -13,3 +13,4 @@
 * [第四课 前端技术入门之CSS](lesson4.md)
 * [第五课 前端技术入门之DOM & BOM](lesson5.md)
 * [第六课 前端技术入门之React（一）](lesson6.md)
+* [第七课 前端技术入门之React（二）](lesson7.md)
