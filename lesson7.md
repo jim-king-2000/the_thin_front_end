@@ -1,7 +1,7 @@
 # 第七课 前端技术入门之React（二）
 
 ## 条件渲染
-在很多时候，我们需要根据某个变量来决定内容是否显示。这时，我们需要使用条件渲染。这类似于计算机语言中的if。但是，在React的花括号中只能放表达式，而if是语句，因此if将无法放入花括号中。但是，幸好我们有&&。
+在很多时候，我们需要根据某个变量来决定内容是否显示。这时，我们需要使用条件渲染。这类似于计算机语言中的`if`。但是，在React的花括号中只能放表达式，而`if`是语句，因此`if`将无法放入花括号中。但是，幸好我们有`&&`。
 ```javascript
 class Root extends React.Component {
   constructor(props) {
@@ -24,11 +24,11 @@ class Root extends React.Component {
   }
 }
 ```
-当标签中出现了falsy值的时候，React什么也不显示。因此，当this.state.show的值为false的时候，整个花括号里面的内容就如同消失了一样。但是，一旦this.state.show的值被设置成了true，这时整个表达式的值是&&符号的右边的操作符的值，也就是`<p>真正的内容</p>`标签。
-如果我们需要创建一个没有显示的组件，我们可以直接return null。
+当标签中出现了falsy值的时候，React什么也不显示。因此，当`this.state.show`的值为`false`的时候，整个花括号里面的内容就如同消失了一样。但是，一旦`this.state.show`的值被设置成了`true`，这时整个表达式的值是`&&`符号的右边的操作符的值，也就是`<p>真正的内容</p>`标签。
+如果我们需要创建一个没有显示的组件，我们可以直接`return null`。
 
 ## 多组件渲染
-我们经常会遇到要渲染一组对象的场景，比如需要渲染一组人名的复选框，或是渲染一组可点击的选项。React支持直接渲染数组。但一般这样的数组，需要经过变换处理才可以被显示。同理，for语句是不可以放到花括号中的。这时，我们就可以用Array.map()。
+我们经常会遇到要渲染一组对象的场景，比如需要渲染一组人名的复选框，或是渲染一组可点击的选项。React支持直接渲染数组。但一般这样的数组，需要经过变换处理才可以被显示。同理，for语句是不可以放到花括号中的。这时，我们就可以用`Array.map()`。
 ```javascript
 const Root = ({ value }) => (
   <form>
@@ -102,13 +102,13 @@ class Root extends React.Component {
 React的事件处理与DOM非常相似，只有三点不同。那就是：
 * React事件绑定属性的命名采用驼峰式写法，DOM是小写。
 * React事件需要传入一个函数，DOM传入一个字符串。
-* React事件不可以返回false来阻止默认行为，必须明确使用e.preventDefault()。
+* React事件不可以返回`false`来阻止默认行为，必须明确使用`e.preventDefault()`。
 
 因此，在React中，绑定一个Button的单击方法，我们这么写：
 ```javascript
 <Button onClick={handler} />
 ```
-如果我们使用class的话，由于Javascript语法的特殊性，`this.handler`只是一个普通函数，并没有绑定this。因此我们只能在构造函数中自行绑定，否则在`this.handler`函数中访问this将得到`undefined`。
+如果我们使用class的话，由于Javascript语法的特殊性，`this.handler`只是一个普通函数，并没有绑定`this`。因此我们只能在构造函数中自行绑定，否则在`this.handler`函数中访问`this`将得到`undefined`。
 ```javascript
 class Page extends Component {
   constructor(props) {
