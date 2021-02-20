@@ -19,3 +19,4 @@
 * [第十课 前端技术入门之布局大法](lesson10.md)
 * [第十一课 前端技术入门之UI库](lesson11.md)
 * [第十二课 前端技术入门之MobX](lesson12.md)
+* [附录](appendix.md)
