@@ -6,7 +6,7 @@
 ## 页面状态管理
 页面的状态控制着页面数据的流动和元素的呈现。绝大多数的页面状态管理流程，都可以抽象成下图的模式。
 ```mermaid
-graph pageState
+graph TD;
   Actions --> States;
   States --> Computed Values;
   Computed Values --> Reactions;
