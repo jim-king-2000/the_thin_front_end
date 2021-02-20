@@ -15,3 +15,5 @@
 * [第六课 前端技术入门之React（一）](lesson6.md)
 * [第七课 前端技术入门之React（二）](lesson7.md)
 * [第八课 前端技术入门之Next.js](lesson8.md)
+* [第九课 前端技术入门之Styled-Components](lesson9.md)
+* [第十课 前端技术入门之布局大法](lesson10.md)
