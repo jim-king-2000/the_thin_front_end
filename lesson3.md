@@ -65,9 +65,9 @@
 
 1. ## 架设HTML服务器
 	我们使用Node.js + Next.js来架设一个最简单的HTML服务器（Node.js必须事先安装好）。步骤如下：
-	1. 新建子目录并且进入该子目录：mkdir test&&cd test
-	1. 创建package.json：npm -y init
-	1. 安装Next.js: npm i -y next react react-dom
+	1. 新建子目录并且进入该子目录：`mkdir test&&cd test`
+	1. 创建package.json：`npm -y init`
+	1. 安装Next.js: `npm i -y next react react-dom`
 	1. 打开package.json，将scripts修改成下面的内容：
 		```json
 		"scripts": {
@@ -76,7 +76,7 @@
 		  "start": "next start"
 		},
 		```
-	1. 新建static和pages子目录：mkdir static pages
+	1. 新建static和pages子目录：`mkdir static pages`
 	1. 在static子目录下创建index.html文件
 		```html
 		<!DOCTYPE HTML>
@@ -87,8 +87,8 @@
 		  </body>
 		</html>
 		```
-	1. 启动服务器：npm run dev
-	1. 打开浏览器，访问 http://localhost:3000/static/index.html
+	1. 启动服务器：`npm run dev`
+	1. 打开浏览器，访问 <http://localhost:3000/static/index.html>
 	1. 再把index.html的内容换成表单试试。
 
 1. ## 参考资料
