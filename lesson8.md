@@ -17,21 +17,6 @@ export default () => <p>Hello Next.js</p>;
 2. 启动服务器：npm run dev
 3. 访问： http://localhost:3000
 
-## 使用类组件
-使用类组件也相当容易，只是要先引入react库。
-```javascript
-import React, { Component } from 'react';
-
-export default class extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return <p>Hello Next.js</p>;
-  }
-}
-```
 ## 服务端渲染
 按F5刷新页面，页面纹丝不动。这是因为，Next.js默认就是服务端渲染，当浏览器请求HTML的时候，它的内容就是全量页面。这时所有的内容就都已经渲染出来了。当JS加载且运行完毕之后，还会进行一次客户端渲染。由于客户端渲染的结果跟服务端渲染是一样的，而React只会重新渲染变化的DOM，因此客户端渲染什么都不做。由于没有任何一次渲染会渲染空白页，因此页面永远不会闪烁。这时，页面的渲染效果已经跟App别无二致了。
 
