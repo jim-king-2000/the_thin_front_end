@@ -8,8 +8,8 @@
 ```mermaid
 graph TD;
   Actions --> States;
-  States --> Computed Values;
-  Computed Values --> Reactions;
+  States --> C[Computed Values];
+  C --> Reactions;
   Reactions --> Actions;
 ```
 Actions就是事件的回调函数，它可以由用户输入（如点击按钮，修改文本等）触发，也可以由系统事件（如定时器消息，服务器反推等）触发。在Actions里面，我们可以直接修改状态，也可以调用API，获取服务器的数据，再根据数据修改状态。
