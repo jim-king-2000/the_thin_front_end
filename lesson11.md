@@ -40,8 +40,8 @@ export default () => (
       </Box>
       <TextInput placeholder='type here' />
       <List
-        primaryKey="name"
-        secondaryKey="percent"
+        primaryKey='name'
+        secondaryKey='percent'
         data={[
           { name: 'Alan', percent: 20 },
           { name: 'Bryan', percent: 30 },
