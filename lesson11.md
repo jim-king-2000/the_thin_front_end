@@ -56,3 +56,5 @@ export default () => (
 
 ## 参考资料
 1. [Grommet V2官网](https://v2.grommet.io/)
+1. [Grommet V2 story book](https://storybook.grommet.io/?path=/story/all--all)
+1. [Grommet Icon](https://icons.grommet.io/)
