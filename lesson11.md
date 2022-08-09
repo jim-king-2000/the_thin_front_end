@@ -4,7 +4,6 @@
 
 目前为大家介绍一个基于styled-components的UI库，Grommet V2。我们的demo code使用这个库为大家生成一个包含了一种控件的对话框。
 
-## Grommet V2
 Grommet库的V2版使用Styled-Components替代了SASS（一种CSS的预处理器，用来生成CSS，但增加了很多扩展语法）。Grommet V2被NetFlix和Uber等公司所使用。
 Grommet V2还增加了布局元素，支持Box，Grid，Layer和Stack等常用布局。
 ```javascript
