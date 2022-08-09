@@ -6,73 +6,79 @@
 
 Grommet库的V2版使用Styled-Components替代了SASS（一种CSS的预处理器，用来生成CSS，但增加了很多扩展语法）。Grommet V2被NetFlix和Uber等公司所使用。
 Grommet V2还增加了布局元素，支持Box，Grid，Layer和Stack等常用布局。
-```javascript
-import React, { Component } from 'react';
-import { Box, Layer, Grommet, Button, Heading, FormField, TextInput } from 'grommet';
 
-export default class extends Component {
-  constructor(props) {
-    super(props);
-    this.onClick = this.onClick.bind(this);
-    this.onChange = this.onChange.bind(this);
-    this.onCancel = this.onCancel.bind(this);
-    this.onCreate = this.onCreate.bind(this);
-    this.state = {
-      isOpen: false,
-      name: ''
+使用Grommet V2，先需要安装。
+
+    `npm i grommet`
+    
+然后在`index.js`里填上如下代码：
+    ```javascript
+    import React, { Component } from 'react';
+    import { Box, Layer, Grommet, Button, Heading, FormField, TextInput } from 'grommet';
+
+    export default class extends Component {
+      constructor(props) {
+        super(props);
+        this.onClick = this.onClick.bind(this);
+        this.onChange = this.onChange.bind(this);
+        this.onCancel = this.onCancel.bind(this);
+        this.onCreate = this.onCreate.bind(this);
+        this.state = {
+          isOpen: false,
+          name: ''
+        }
+      }
+
+      onClick() {
+        this.setState({ isOpen: true });
+      }
+
+      onChange(e) {
+        this.setState({ name: e.target.value });
+      }
+
+      onCancel() {
+        this.setState({ isOpen: false });
+      }
+
+      onCreate() {
+        alert(`Student ${this.state.name} is created.`);
+        this.onCancel();
+      }
+
+      render() {
+        return (
+          <Grommet plain full>
+            <Button primary label='Open Dialog' onClick={this.onClick} />
+            {this.state.isOpen &&
+            <Layer>
+              <Box pad='medium' gap='small' width='medium'>
+                <Heading level={3} margin='none'>
+                  Create a new student
+                </Heading>
+                <FormField label='name'>
+                  <TextInput
+                    value={this.state.name}
+                    onChange={this.onChange} />
+                </FormField>
+                <Box
+                  as='footer'
+                  gap='small'
+                  direction='row'
+                  align='center'
+                  justify='end'
+                  pad={{ top: 'medium', bottom: 'small' }}
+                >
+                  <Button primary label='Create' onClick={this.onCreate} />
+                  <Button default label='Cancel' onClick={this.onCancel} />
+                </Box>
+              </Box>
+            </Layer>}
+          </Grommet>
+        );
+      }
     }
-  }
-
-  onClick() {
-    this.setState({ isOpen: true });
-  }
-
-  onChange(e) {
-    this.setState({ name: e.target.value });
-  }
-
-  onCancel() {
-    this.setState({ isOpen: false });
-  }
-
-  onCreate() {
-    alert(`Student ${this.state.name} is created.`);
-    this.onCancel();
-  }
-
-  render() {
-    return (
-      <Grommet plain full>
-        <Button primary label='Open Dialog' onClick={this.onClick} />
-        {this.state.isOpen &&
-        <Layer>
-          <Box pad='medium' gap='small' width='medium'>
-            <Heading level={3} margin='none'>
-              Create a new student
-            </Heading>
-            <FormField label='name'>
-              <TextInput
-                value={this.state.name}
-                onChange={this.onChange} />
-            </FormField>
-            <Box
-              as='footer'
-              gap='small'
-              direction='row'
-              align='center'
-              justify='end'
-              pad={{ top: 'medium', bottom: 'small' }}
-            >
-              <Button primary label='Create' onClick={this.onCreate} />
-              <Button default label='Cancel' onClick={this.onCancel} />
-            </Box>
-          </Box>
-        </Layer>}
-      </Grommet>
-    );
-  }
-}
-```
+    ```
 
 ## 参考资料
 1. [Grommet V2官网](https://v2.grommet.io/)
