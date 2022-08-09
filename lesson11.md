@@ -9,12 +9,13 @@ Grommet V2还增加了布局元素，支持Box，Grid，Layer和Stack等常用�
 
 使用Grommet V2，先需要安装。
 
-    npm i grommet
+    npm i grommet grommet-icons
     
 然后在`index.js`里填上如下代码：
 ``` javascript
 import { Grommet, Box, Button, Heading, Text, Accordion, AccordionPanel, CheckBoxGroup, TextInput, List, Clock } from 'grommet';
 import { grommet } from 'grommet/themes';
+import { Test } from 'grommet-icons';
 
 export default () => (
   <Grommet full theme={grommet}>
@@ -22,7 +23,7 @@ export default () => (
       <Clock />
       <Heading>Grommet V2</Heading>
       <Text>这是一个Grommet V2的测试网页。</Text>
-      <Button label='测试' />
+      <Button label='测试' icon={<Test />} />
       <Accordion>
         <AccordionPanel label='Panel 1'>
           <Box pad='medium' background='light-2'>
