@@ -12,72 +12,46 @@ Grommet V2还增加了布局元素，支持Box，Grid，Layer和Stack等常用�
     npm i grommet
     
 然后在`index.js`里填上如下代码：
-```javascript
-import React, { Component } from 'react';
-import { Box, Layer, Grommet, Button, Heading, FormField, TextInput } from 'grommet';
+``` javascript
+import { Grommet, Box, Button, Heading, Text, Accordion, AccordionPanel, CheckBoxGroup, TextInput, List, Clock } from 'grommet';
+import { grommet } from 'grommet/themes';
 
-export default class extends Component {
-  constructor(props) {
-    super(props);
-    this.onClick = this.onClick.bind(this);
-    this.onChange = this.onChange.bind(this);
-    this.onCancel = this.onCancel.bind(this);
-    this.onCreate = this.onCreate.bind(this);
-    this.state = {
-      isOpen: false,
-      name: ''
-    }
-  }
-
-  onClick() {
-    this.setState({ isOpen: true });
-  }
-
-  onChange(e) {
-    this.setState({ name: e.target.value });
-  }
-
-  onCancel() {
-    this.setState({ isOpen: false });
-  }
-
-  onCreate() {
-    alert(`Student ${this.state.name} is created.`);
-    this.onCancel();
-  }
-
-  render() {
-    return (
-      <Grommet plain full>
-        <Button primary label='Open Dialog' onClick={this.onClick} />
-        {this.state.isOpen &&
-        <Layer>
-          <Box pad='medium' gap='small' width='medium'>
-            <Heading level={3} margin='none'>
-              Create a new student
-            </Heading>
-            <FormField label='name'>
-              <TextInput
-                value={this.state.name}
-                onChange={this.onChange} />
-            </FormField>
-            <Box
-              as='footer'
-              gap='small'
-              direction='row'
-              align='center'
-              justify='end'
-              pad={{ top: 'medium', bottom: 'small' }}
-            >
-              <Button primary label='Create' onClick={this.onCreate} />
-              <Button default label='Cancel' onClick={this.onCancel} />
-            </Box>
+export default () => (
+  <Grommet full theme={grommet}>
+    <Box>
+      <Clock />
+      <Heading>Grommet V2</Heading>
+      <Text>这是一个Grommet V2的测试网页。</Text>
+      <Button label='测试' />
+      <Accordion>
+        <AccordionPanel label='Panel 1'>
+          <Box pad='medium' background='light-2'>
+            <Text>One</Text>
           </Box>
-        </Layer>}
-      </Grommet>
-    );
-  }
-}
+        </AccordionPanel>
+        <AccordionPanel label='Panel 2'>
+          <Box pad='medium' background='light-2'>
+            <Text>Two</Text>
+          </Box>
+        </AccordionPanel>
+      </Accordion>
+      <Box pad='medium'>
+        <CheckBoxGroup options={['Maui', 'Kauai', 'Oahu']} />
+      </Box>
+      <TextInput placeholder='type here' />
+      <List
+        primaryKey="name"
+        secondaryKey="percent"
+        data={[
+          { name: 'Alan', percent: 20 },
+          { name: 'Bryan', percent: 30 },
+          { name: 'Chris', percent: 40 },
+          { name: 'Eric', percent: 80 },
+        ]}
+      />
+    </Box>
+  </Grommet>
+);
 ```
 
 ## 参考资料
