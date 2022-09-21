@@ -6,11 +6,8 @@
 ## 页面状态管理
 页面的状态控制着页面数据的流动和元素的呈现。绝大多数的页面状态管理流程，都可以抽象成下图的模式。
 ```mermaid
-graph TD;
-  Actions --> States;
-  States --> C[Computed Values];
-  C --> Reactions;
-  Reactions --> Actions;
+graph LR;
+  A[Actions] --> States --> C[Computed Values]--> R[Reactions] --> A;
 ```
 Actions就是事件的回调函数，它可以由用户输入（如点击按钮，修改文本等）触发，也可以由系统事件（如定时器消息，服务器反推等）触发。在Actions里面，我们可以直接修改状态，也可以调用API，获取服务器的数据，再根据数据修改状态。
 
