@@ -49,7 +49,8 @@ const sidebar = (
   <div>
     <h1>Title</h1>
     <p>Content</p>
-  </div>);
+  </div>
+);
 ```
 在多行React元素的外面，我们可以使用小括号将其包住。
 
