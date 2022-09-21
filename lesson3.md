@@ -8,7 +8,7 @@
 	<html>
 	  <head></head>
 	  <body>
-		<p>Hello HTML</p>
+	    <p>Hello HTML</p>
 	  </body>
 	</html>
 	```
@@ -53,9 +53,9 @@
 	  <input type="reset" />
 	  <input type="hidden" />
 	  <select>
-		<option>苹果</option>
-		<option selected="selected">香蕉</option>
-		<option>樱桃</option>
+            <option>苹果</option>
+            <option selected="selected">香蕉</option>
+            <option>樱桃</option>
 	  </select>
 	  <textarea name="comment" rows="60" cols="20"></textarea>
 	</form>
@@ -83,7 +83,7 @@
 		<html>
 		  <head></head>
 		  <body>
-			<p>Hello HTML</p>
+                    <p>Hello HTML</p>
 		  </body>
 		</html>
 		```
